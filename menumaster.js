@@ -44,29 +44,9 @@ function copyList() {
         alert("Não foi possível copiar a lista.");
       });
   } else {
-    var textarea = document.createElement("textarea");
-    textarea.value = message;
-
-    // Faz com que o textarea seja visível, mas fora da área visível da página
-    textarea.style.position = "absolute";
-    textarea.style.left = "-9999px";
-
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-
-    try {
-      var successful = document.execCommand("copy");
-      var msg = successful ? "Lista copiada para a área de transferência!" : "Não foi possível copiar a lista.";
-      alert(msg);
-    } catch (err) {
-      alert("Não foi possível copiar a lista.");
-    }
-
-    document.body.removeChild(textarea);
+    alert("Não é possível copiar a lista neste dispositivo.");
   }
 }
-
   
   function deleteLastItem() {
     var itemList = document.getElementById("itemList");
